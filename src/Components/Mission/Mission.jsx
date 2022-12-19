@@ -1,16 +1,17 @@
 import PropTypes from 'prop-types';
+import './Mission.css';
 
 const Mission = (props) => {
   const { name, description, status } = props;
 
   return (
-    <li>
-      <ul>
-        <li>{name}</li>
-        <li>{description}</li>
-        <li>{status}</li>
-        <li><button type="button">Join Mission</button></li>
-      </ul>
+    <li className="mission-container">
+      <div className="mission-info">
+        <div>{name}</div>
+        <div>{description}</div>
+        <div><span className="mission-status">{status}</span></div>
+        <div><button type="button">Join Mission</button></div>
+      </div>
     </li>
   );
 };

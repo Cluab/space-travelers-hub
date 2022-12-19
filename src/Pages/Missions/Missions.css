@@ -1,0 +1,43 @@
+.missions-container {
+  margin: 4rem;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.missions-titles {
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    border: 1px solid rgba(0, 0, 0, 0.336);
+    margin-bottom: 0;
+}
+
+.missions-titles :nth-child(1) {
+    padding: 10px;
+    width: 20%;
+    border-right: 1px solid rgba(0, 0, 0, 0.336);
+}
+
+.missions-titles :nth-child(2) {
+    padding: 10px;
+    border-right: 1px solid rgba(0, 0, 0, 0.336);
+    width: 40%;
+}
+
+.missions-titles :nth-child(3) {
+    padding: 10px;
+    border-right: 1px solid rgba(0, 0, 0, 0.336);
+    width: 20%;
+}
+
+.missions-titles :nth-child(4) {
+    padding: 10px;
+    border-right: 1px solid rgba(0, 0, 0, 0.336);
+    width: 20%;
+}
+.missions {
+    margin-top: 0;
+    list-style: none;
+    padding-left: 0;
+}

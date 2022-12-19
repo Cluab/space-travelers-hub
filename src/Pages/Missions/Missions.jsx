@@ -1,4 +1,5 @@
 import Mission from '../../Components/Mission/Mission';
+import './Missions.css';
 
 const MissionPage = () => (
   <div className="missions-container">
@@ -6,13 +7,14 @@ const MissionPage = () => (
       <li>Mission</li>
       <li>Description</li>
       <li>Status</li>
+      <li />
     </ul>
-    <ul>
+    <ul className="missions">
       <Mission
         name="appolo"
         description="paspdkfe
     rkjifjreijfoijjjerf"
-        status="not-joined"
+        status="NOT A MEMBER"
       />
 
     </ul>
