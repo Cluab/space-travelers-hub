@@ -6,11 +6,13 @@ import MissionPage from './Pages/Missions/Missions';
 import Rockets from './Pages/Rockets/Rockets';
 import { getRockets } from './Redux/Rockets/rockets';
 import Profile from './Pages/Profile/Profile';
+import { getMissions } from './Redux/Missions/mission';
 
 const App = () => {
   const dispatch = useDispatch();
 
   dispatch(getRockets());
+  dispatch(getMissions());
 
   return (
     <div className="app">

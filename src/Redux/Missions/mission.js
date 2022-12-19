@@ -8,8 +8,9 @@ const ADD_MISSIONS = 'spaceTravels.Hub/Missions/ADD_MISSIONS';
 
 const AddMissions = (Missions) => ({
   type: ADD_MISSIONS,
-  payload: Missions.map((mission) => ({
-    missionName: mission.mission_name,
+  payload: Missions.data.map((mission) => ({
+    id: mission.mission_id,
+    name: mission.mission_name,
     description: mission.description,
   })),
 
