@@ -5,8 +5,8 @@ import Rockets from './Pages/Rockets/Rockets';
 
 const App = () => (
   <div className="app">
-    <Header />
     <BrowserRouter>
+      <Header />
       <Routes>
         <Route path="/" element={<Rockets />} />
       </Routes>

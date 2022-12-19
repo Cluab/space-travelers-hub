@@ -4,14 +4,14 @@ import './header.scss';
 
 const Header = () => {
   const activeStyle = {
-    color: '#121212',
+    textDecorationLine: 'underline',
   };
 
   return (
     <header className="header">
       <nav>
         <h1>
-          <img src={SpaceHubLogo} alt="Space travels' hub logo" />
+          <img src={SpaceHubLogo} width="50" alt="Space travels' hub logo" />
           <NavLink to="/">Space Travels&apos; Hub</NavLink>
         </h1>
         <ul>

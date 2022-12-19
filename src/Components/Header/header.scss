@@ -1,5 +1,5 @@
 .header {
-  padding: 1.5rem 3.5rem;
+  padding: 1rem 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -9,6 +9,8 @@
   & > nav {
     display: flex;
     gap: 2.5rem;
+    width: 100%;
+    justify-content: space-between;
   }
 
   & > nav > ul {
@@ -19,27 +21,37 @@
     & a {
       text-decoration-line: none;
       line-height: 25px;
-      color: #a0a0a0;
-      font-family: Montserrat, sans-serif;
-      font-size: 0.813rem;
-      letter-spacing: 1.9px;
+      color: #449cff;
+      font-family: Poppins, sans-serif;
       font-weight: 500;
+    }
+
+    & > li:last-child {
+      position: relative;
+
+      &::after {
+        content: " ";
+        position: absolute;
+        width: 2px;
+        height: 18px;
+        left: -18px;
+        top: 3px;
+        border-radius: 8px;
+        background-color: #acacac;
+      }
     }
   }
 
   & > nav h1 {
     margin: 0;
+    display: flex;
+    align-items: center;
+    font-family: Poppins, sans-serif;
+    gap: 1rem;
 
     & > a {
       text-decoration-line: none;
-      color: #0290ff;
+      color: #494949;
     }
   }
-}
-
-.user-icon {
-  padding: 0.5rem;
-  border: 1px solid #e8e8e8;
-  border-radius: 50%;
-  cursor: pointer;
 }
