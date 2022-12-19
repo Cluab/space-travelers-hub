@@ -12,7 +12,8 @@ const addRockets = (rockets) => ({
     id: rocket.id,
     rocketName: rocket.rocket_name,
     description: rocket.description,
-    rocketImage: rocket.flickr_images,
+    rocketImage: rocket.flickr_images[0],
+    reserved: false,
   })),
 });
 
