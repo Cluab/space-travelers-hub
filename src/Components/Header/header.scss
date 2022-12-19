@@ -1,0 +1,45 @@
+.header {
+  padding: 1.5rem 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  border-bottom: 1px solid #e8e8e8;
+
+  & > nav {
+    display: flex;
+    gap: 2.5rem;
+  }
+
+  & > nav > ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+
+    & a {
+      text-decoration-line: none;
+      line-height: 25px;
+      color: #a0a0a0;
+      font-family: Montserrat, sans-serif;
+      font-size: 0.813rem;
+      letter-spacing: 1.9px;
+      font-weight: 500;
+    }
+  }
+
+  & > nav h1 {
+    margin: 0;
+
+    & > a {
+      text-decoration-line: none;
+      color: #0290ff;
+    }
+  }
+}
+
+.user-icon {
+  padding: 0.5rem;
+  border: 1px solid #e8e8e8;
+  border-radius: 50%;
+  cursor: pointer;
+}
