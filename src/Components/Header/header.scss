@@ -4,13 +4,14 @@
   align-items: center;
   justify-content: space-between;
   background-color: #fff;
-  border-bottom: 1px solid #e8e8e8;
+  border-bottom: 1px solid #cacaca;
 
   & > nav {
     display: flex;
     gap: 2.5rem;
     width: 100%;
     justify-content: space-between;
+    align-items: center;
   }
 
   & > nav > ul {
