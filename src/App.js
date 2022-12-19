@@ -25,6 +25,4 @@ const App = () => {
     </div>
   );
 };
->>>>>>> development
-
 export default App;
