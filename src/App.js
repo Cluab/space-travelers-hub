@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import Header from './Components/Header/Header';
 import Rockets from './Pages/Rockets/Rockets';
 import { getRockets } from './Redux/Rockets/rockets';
+import Profile from './Pages/Profile/Profile';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -16,6 +17,7 @@ const App = () => {
         <Header />
         <Routes>
           <Route path="/" element={<Rockets />} />
+          <Route path="/profile" element={<Profile />} />
         </Routes>
       </BrowserRouter>
     </div>
