@@ -25,7 +25,7 @@ describe('Rocket component', () => {
     },
   ];
 
-  it('should render rocket component', () => {
+  it('should match the snapshot', () => {
     const rocketComponent = TestRenderer.create(
       <Provider store={store}>
         <Rocket
@@ -38,7 +38,7 @@ describe('Rocket component', () => {
     expect(rocketComponent).toMatchSnapshot();
   });
 
-  it('should display details', async () => {
+  it('should display Rocket details', async () => {
     const { container } = await act(() => render(
       <Provider store={store}>
         <Rocket
@@ -48,9 +48,9 @@ describe('Rocket component', () => {
       </Provider>,
     ));
 
-    const rocketDetails = container.querySelector('.rocket-details');
-    const title = rocketDetails.querySelector('h2').textContent;
-    const description = rocketDetails.querySelector('p').textContent;
+    const rocketDetailsEl = container.querySelector('.rocket-details');
+    const title = rocketDetailsEl.querySelector('h2').textContent;
+    const description = rocketDetailsEl.querySelector('p').textContent;
 
     expect(title).toBe(data[1].rocketName);
     expect(description).toBe(data[1].description);
