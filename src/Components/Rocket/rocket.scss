@@ -3,13 +3,8 @@
   display: flex;
   gap: 1rem;
 
-  & > figure {
-    width: 100%;
-    max-width: 350px;
-
-    & > .rocket-img {
-      width: 100%;
-    }
+  & .rocket-img {
+    width: 350px;
   }
 
   & > .rocket-details {
@@ -28,6 +23,10 @@
       line-height: 24px;
       letter-spacing: 0.7px;
     }
+  }
+
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
   }
 }
 
