@@ -1,7 +1,7 @@
 import './rocket.scss';
 import { PropTypes } from 'prop-types';
 
-const Rocket = ({ rocket }) => (
+const Rocket = ({ rocket, handleReservation }) => (
   <article className="rocket">
     <figure>
       <img className="rocket-img" src={rocket.rocketImage} alt="rocket" />
@@ -14,14 +14,15 @@ const Rocket = ({ rocket }) => (
       </p>
       {
         rocket.reserved
-          ? <button type="button" className="reserved">Cancel Reservation</button>
-          : <button type="button" className="reserve">Reserve Rocket</button>
+          ? <button onClick={handleReservation} type="button" className="reserved">Cancel Reservation</button>
+          : <button onClick={handleReservation} type="button" className="reserve">Reserve Rocket</button>
       }
     </div>
   </article>
 );
 
 Rocket.propTypes = {
+  handleReservation: PropTypes.func.isRequired,
   rocket: PropTypes.arrayOf(
     PropTypes.shape({
       rocketImage: PropTypes.string.isRequired,
