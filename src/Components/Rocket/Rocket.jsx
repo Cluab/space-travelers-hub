@@ -1,36 +1,35 @@
 import './rocket.scss';
 import { PropTypes } from 'prop-types';
 
-const Rocket = ({
-  rocketImage,
-  rocketName,
-  description,
-  reserved,
-}) => (
+const Rocket = ({ rocket }) => (
   <article className="rocket">
     <figure>
-      <img className="rocket-img" src={rocketImage} alt="rocket" />
+      <img className="rocket-img" src={rocket.rocketImage} alt="rocket" />
     </figure>
     <div className="rocket-details">
-      <h2>{rocketName}</h2>
+      <h2>{rocket.rocketName}</h2>
       <p>
-        { reserved && <span className="reserved-tag">Reserved</span> }
-        {description}
+        { rocket.reserved && <span className="reserved-tag">Reserved</span> }
+        {rocket.description}
       </p>
       {
-        reserved
-          ? <button type="button" className="reserve">Reserve Rocket</button>
-          : <button type="button" className="reserved">Cancel Reservation</button>
+        rocket.reserved
+          ? <button type="button" className="reserved">Cancel Reservation</button>
+          : <button type="button" className="reserve">Reserve Rocket</button>
       }
     </div>
   </article>
 );
 
 Rocket.propTypes = {
-  rocketImage: PropTypes.string.isRequired,
-  rocketName: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  reserved: PropTypes.bool.isRequired,
+  rocket: PropTypes.arrayOf(
+    PropTypes.shape({
+      rocketImage: PropTypes.string.isRequired,
+      rocketName: PropTypes.string.isRequired,
+      description: PropTypes.string.isRequired,
+      reserved: PropTypes.bool.isRequired,
+    }),
+  ).isRequired,
 };
 
 export default Rocket;
