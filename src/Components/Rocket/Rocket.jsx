@@ -23,14 +23,12 @@ const Rocket = ({ rocket, handleReservation }) => (
 
 Rocket.propTypes = {
   handleReservation: PropTypes.func.isRequired,
-  rocket: PropTypes.arrayOf(
-    PropTypes.shape({
-      rocketImage: PropTypes.string.isRequired,
-      rocketName: PropTypes.string.isRequired,
-      description: PropTypes.string.isRequired,
-      reserved: PropTypes.bool.isRequired,
-    }),
-  ).isRequired,
+  rocket: PropTypes.shape({
+    rocketImage: PropTypes.string.isRequired,
+    rocketName: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    reserved: PropTypes.bool.isRequired,
+  }).isRequired,
 };
 
 export default Rocket;
