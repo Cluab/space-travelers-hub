@@ -6,7 +6,7 @@ let newState;
 const GET_MISSIONS = 'spaceTravelsHub/Missions/GET_MISSIONS';
 const ADD_MISSIONS = 'spaceTravels.Hub/Missions/ADD_MISSIONS';
 const JOIN_MISSIONS = 'spaceTravels.Hub/Missions/JOIN_MISSIONS';
-
+const LEAVE_MISSIONS = 'spaceTravels.Hub/Missions/LEAVE_MISSIONS';
 const AddMissions = (Missions) => ({
   type: ADD_MISSIONS,
   payload: Missions.data.map((mission) => ({
@@ -28,6 +28,11 @@ export const joinMission = (missionId) => ({
   id: missionId,
 });
 
+export const leaveMission = (missionId) => ({
+  type: LEAVE_MISSIONS,
+  id: missionId,
+});
+
 const MissionsReducer = (state = missions, action) => {
   switch (action.type) {
     case ADD_MISSIONS:
@@ -36,6 +41,12 @@ const MissionsReducer = (state = missions, action) => {
       newState = state.map((mission) => {
         if (mission.id !== action.id) { return mission; }
         return { ...mission, reserved: true };
+      });
+      return newState;
+    case LEAVE_MISSIONS:
+      newState = state.map((mission) => {
+        if (mission.id !== action.id) { return mission; }
+        return { ...mission, reserved: false };
       });
       return newState;
     default:
