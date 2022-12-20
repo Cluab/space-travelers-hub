@@ -1,7 +1,6 @@
 import { useSelector } from 'react-redux';
 import Mission from '../../Components/Mission/Mission';
 import './Missions.css';
-import './Missions.scss';
 
 const MissionPage = () => {
   const missions = useSelector((state) => state.missions);
@@ -23,7 +22,8 @@ const MissionPage = () => {
         {missions.map((mission, index) => (
           <Mission
             style={{ backgroundColor: getBackGroundColor(index) }}
-            key={mission.div}
+            key={mission.id}
+            id={mission.id}
             name={mission.name}
             description={mission.description}
             status="NOT A MEMBER"
