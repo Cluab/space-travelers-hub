@@ -1,10 +1,17 @@
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { useEffect } from 'react';
 import Mission from '../../Components/Mission/Mission';
 import './Missions.css';
-import './Missions.scss';
+import { getMissions } from '../../Redux/Missions/mission';
 
 const MissionPage = () => {
+  const dispatch = useDispatch();
+
   const missions = useSelector((state) => state.missions);
+  useEffect(() => {
+    if (missions.length) return;
+    dispatch(getMissions());
+  }, [dispatch, missions.length]);
   const isOdd = (num) => num % 2;
   const getBackGroundColor = (num) => {
     let color = 'white';
@@ -23,10 +30,11 @@ const MissionPage = () => {
         {missions.map((mission, index) => (
           <Mission
             style={{ backgroundColor: getBackGroundColor(index) }}
-            key={mission.div}
+            key={mission.id}
+            id={mission.id}
             name={mission.name}
             description={mission.description}
-            status="NOT A MEMBER"
+            member={mission.member}
           />
         ))}
 
