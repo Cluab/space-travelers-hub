@@ -35,7 +35,6 @@ const MissionPage = () => {
             name={mission.name}
             description={mission.description}
             member={mission.member}
-            status="NOT A MEMBER"
           />
         ))}
 

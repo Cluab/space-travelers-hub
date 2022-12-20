@@ -4,7 +4,7 @@ import { joinMission } from '../../Redux/Missions/mission';
 import './Mission.css';
 
 const Mission = ({
-  id, name, description, status, style, member,
+  id, name, description, style, member,
 }) => {
   const dispatch = useDispatch();
   return (
@@ -12,7 +12,13 @@ const Mission = ({
       <div className="mission-info">
         <div>{name}</div>
         <div>{description}</div>
-        <div><span className="mission-status">{status}</span></div>
+        <div>
+          {member
+            ? (
+              <span className="mission-status">MEMBER</span>)
+            : <span className="mission-status">NOT A MEMBER</span> }
+
+        </div>
         <div>
           {member
             ? (
@@ -33,7 +39,6 @@ const Mission = ({
 Mission.propTypes = {
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  status: PropTypes.string.isRequired,
   style: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
   member: PropTypes.string.isRequired,
