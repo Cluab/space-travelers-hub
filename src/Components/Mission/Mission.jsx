@@ -17,7 +17,6 @@ const Mission = ({
             ? (
               <span className="mission-status-Active">Active Member</span>)
             : <span className="mission-status">NOT A MEMBER</span> }
-
         </div>
         <div>
           {member
