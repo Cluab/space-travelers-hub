@@ -11,7 +11,7 @@ const MissionPage = () => {
   useEffect(() => {
     if (missions.length) return;
     dispatch(getMissions());
-  }, [dispatch]);
+  }, [dispatch, missions.length]);
   const isOdd = (num) => num % 2;
   const getBackGroundColor = (num) => {
     let color = 'white';
@@ -34,6 +34,7 @@ const MissionPage = () => {
             id={mission.id}
             name={mission.name}
             description={mission.description}
+            member={mission.member}
             status="NOT A MEMBER"
           />
         ))}

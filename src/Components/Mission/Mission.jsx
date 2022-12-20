@@ -6,7 +6,6 @@ import './Mission.css';
 const Mission = ({
   id, name, description, status, style,
 }) => {
-  console.log(id);
   const dispatch = useDispatch();
   return (
     <div style={style} className="mission-container">

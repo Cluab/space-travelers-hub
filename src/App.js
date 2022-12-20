@@ -9,9 +9,7 @@ import Profile from './Pages/Profile/Profile';
 
 const App = () => {
   const dispatch = useDispatch();
-
   dispatch(getRockets());
-
   return (
     <div className="app">
       <BrowserRouter>
