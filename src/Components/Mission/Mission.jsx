@@ -15,19 +15,19 @@ const Mission = ({
         <div>
           {member
             ? (
-              <span className="mission-status">MEMBER</span>)
+              <span className="mission-status-Active">Active Member</span>)
             : <span className="mission-status">NOT A MEMBER</span> }
 
         </div>
         <div>
           {member
             ? (
-              <button type="button" onClick={() => dispatch(joinMission(id))}>
+              <button type="button" className="leaveMission" onClick={() => dispatch(joinMission(id))}>
                 leave Mission
               </button>
             )
             : (
-              <button type="button" onClick={() => dispatch(joinMission(id))}>
+              <button type="button" className="joinMission" onClick={() => dispatch(joinMission(id))}>
                 Join Mission
               </button>
             )}
