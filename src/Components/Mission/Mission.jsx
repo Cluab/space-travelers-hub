@@ -4,7 +4,7 @@ import { joinMission } from '../../Redux/Missions/mission';
 import './Mission.css';
 
 const Mission = ({
-  id, name, description, status, style,
+  id, name, description, status, style, member,
 }) => {
   const dispatch = useDispatch();
   return (
@@ -14,10 +14,17 @@ const Mission = ({
         <div>{description}</div>
         <div><span className="mission-status">{status}</span></div>
         <div>
-          <button type="button" onClick={() => dispatch(joinMission(id))}>
-            Join Mission
-          </button>
-
+          {member
+            ? (
+              <button type="button" onClick={() => dispatch(joinMission(id))}>
+                leave Mission
+              </button>
+            )
+            : (
+              <button type="button" onClick={() => dispatch(joinMission(id))}>
+                Join Mission
+              </button>
+            )}
         </div>
       </div>
     </div>
@@ -29,5 +36,6 @@ Mission.propTypes = {
   status: PropTypes.string.isRequired,
   style: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
+  member: PropTypes.string.isRequired,
 };
 export default Mission;
