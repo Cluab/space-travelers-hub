@@ -1,9 +1,17 @@
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { useEffect } from 'react';
 import Mission from '../../Components/Mission/Mission';
 import './Missions.css';
+import { getMissions } from '../../Redux/Missions/mission';
 
 const MissionPage = () => {
+  const dispatch = useDispatch();
+
   const missions = useSelector((state) => state.missions);
+  useEffect(() => {
+    if (missions.length) return;
+    dispatch(getMissions());
+  }, [dispatch]);
   const isOdd = (num) => num % 2;
   const getBackGroundColor = (num) => {
     let color = 'white';
