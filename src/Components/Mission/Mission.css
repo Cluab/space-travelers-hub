@@ -72,7 +72,15 @@
   border: 2px solid rgb(88, 87, 87);
 }
 
+.joinMission:hover {
+  cursor: pointer;
+}
+
 .leaveMission {
   color: red;
   border: 2px solid red;
+}
+
+.leaveMission:hover {
+  cursor: pointer;
 }
