@@ -10,8 +10,8 @@ const Mission = ({
   return (
     <div className="mission-container">
       <div className="mission-info">
-        <div>{name}</div>
-        <div>{description}</div>
+        <div data-testid="test-name">{name}</div>
+        <div data-testid="test-description">{description}</div>
         <div>
           {member
             ? (

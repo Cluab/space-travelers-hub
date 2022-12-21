@@ -1,4 +1,4 @@
-// import { render, screen } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 // import { BrowserRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
@@ -30,5 +30,24 @@ describe('nav bar test cases', () => {
         </Provider>,
       ).toJSON();
     expect(tree).toMatchSnapshot();
+  });
+
+  it('should ', () => {
+    render(
+      <Provider store={store}>
+        <Mission
+          key={mission[0].id}
+          id={mission[0].id}
+          name={mission[0].name}
+          description={mission[0].description}
+          member={mission[0].member}
+        />
+      </Provider>,
+    );
+    const missionName = screen.getByTestId('test-name').textContent;
+    const missionDescription = screen.getByTestId('test-description').textContent;
+
+    expect(missionName).toBe(mission[0].name);
+    expect(missionDescription).toBe(mission[0].description);
   });
 });
