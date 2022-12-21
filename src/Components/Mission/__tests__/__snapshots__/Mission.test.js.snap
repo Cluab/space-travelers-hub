@@ -19,18 +19,18 @@ exports[`mission component test cases should match with snapshot 1`] = `
     </div>
     <div>
       <span
-        className="mission-status-Active"
+        className="mission-status"
       >
-        Active Member
+        NOT A MEMBER
       </span>
     </div>
     <div>
       <button
-        className="leaveMission"
+        className="joinMission"
         onClick={[Function]}
         type="button"
       >
-        leave Mission
+        Join Mission
       </button>
     </div>
   </div>

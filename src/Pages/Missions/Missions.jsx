@@ -28,7 +28,7 @@ const MissionPage = () => {
             id={mission.id}
             name={mission.name}
             description={mission.description}
-            member={Boolean(mission.member)}
+            member={mission.member}
           />
         ))}
 
