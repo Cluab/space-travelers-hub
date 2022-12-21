@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`nav bar test cases Link renders correctly 1`] = `
+exports[`nav bar test cases should match with snapshot 1`] = `
 <div
   className="mission-container"
 >

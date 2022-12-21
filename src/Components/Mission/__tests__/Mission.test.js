@@ -16,7 +16,7 @@ const mission = [{
 const store = configureStore({ reducer: { missions: MissionsReducer } });
 
 describe('nav bar test cases', () => {
-  test('Link renders correctly', () => {
+  test('should match with snapshot', () => {
     const tree = renderer
       .create(
         <Provider store={store}>
@@ -32,7 +32,7 @@ describe('nav bar test cases', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it('should ', () => {
+  it('should match with input data ', () => {
     render(
       <Provider store={store}>
         <Mission
