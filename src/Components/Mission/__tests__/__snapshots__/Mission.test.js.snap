@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`nav bar test cases Link renders correctly 1`] = `
+<div
+  className="mission-container"
+>
+  <div
+    className="mission-info"
+  >
+    <div>
+      Thaicom
+    </div>
+    <div>
+      Thaicom is the name of a series of communications satellites operated from Thailand, and also the name of Thaicom Public Company Limited, which is the company that owns and operates the Thaicom satellite fleet and other telecommunication businesses in Thailand and throughout the Asia-Pacific region. The satellite projects were named Thaicom by the King of Thailand, His Majesty the King Bhumibol Adulyadej, as a symbol of the linkage between Thailand and modern communications technology.
+    </div>
+    <div>
+      <span
+        className="mission-status-Active"
+      >
+        Active Member
+      </span>
+    </div>
+    <div>
+      <button
+        className="leaveMission"
+        onClick={[Function]}
+        type="button"
+      >
+        leave Mission
+      </button>
+    </div>
+  </div>
+</div>
+`;
