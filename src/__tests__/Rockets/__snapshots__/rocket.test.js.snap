@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Rocket component should render rocket component 1`] = `
+exports[`Rocket component should match the snapshot 1`] = `
 <article
   className="rocket"
 >

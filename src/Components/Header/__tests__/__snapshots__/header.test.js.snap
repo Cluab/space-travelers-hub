@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header test cases should  1`] = `
+<header
+  className="header"
+>
+  <nav>
+    <h1>
+      <img
+        alt="Space travels' hub logo"
+        src="space-hub-logo.png"
+        width="50"
+      />
+      <a
+        aria-current="page"
+        className="active"
+        href="/"
+        onClick={[Function]}
+      >
+        Space Travels' Hub
+      </a>
+    </h1>
+    <ul>
+      <li>
+        <a
+          aria-current="page"
+          className="active"
+          href="/"
+          onClick={[Function]}
+          style={
+            Object {
+              "textDecorationLine": "underline",
+            }
+          }
+        >
+          Rockets
+        </a>
+      </li>
+      <li>
+        <a
+          className=""
+          href="/missions"
+          onClick={[Function]}
+        >
+          Missions
+        </a>
+      </li>
+      <li>
+        <a
+          className=""
+          href="/profile"
+          onClick={[Function]}
+        >
+          My Profile
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+`;

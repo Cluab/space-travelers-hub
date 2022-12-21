@@ -4,14 +4,14 @@ import { joinMission } from '../../Redux/Missions/mission';
 import './Mission.css';
 
 const Mission = ({
-  id, name, description, style, member,
+  id, name, description, member,
 }) => {
   const dispatch = useDispatch();
   return (
-    <div style={style} className="mission-container">
+    <div className="mission-container">
       <div className="mission-info">
-        <div>{name}</div>
-        <div>{description}</div>
+        <div data-testid="test-name">{name}</div>
+        <div data-testid="test-description">{description}</div>
         <div>
           {member
             ? (
@@ -38,8 +38,8 @@ const Mission = ({
 Mission.propTypes = {
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  style: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
-  member: PropTypes.string.isRequired,
+  member: PropTypes.bool.isRequired,
+  // member: PropTypes.string.isRequired,
 };
 export default Mission;

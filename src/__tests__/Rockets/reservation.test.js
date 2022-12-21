@@ -5,6 +5,7 @@ import fetchMock from 'jest-fetch-mock';
 import rocketsReducer, { getRockets } from '../../Redux/Rockets/rockets';
 import Rockets from '../../Pages/Rockets/Rockets';
 import App from '../../App';
+import MissionsReducer from '../../Redux/Missions/mission';
 
 function renderWithProvider(ui, store, renderOptions) {
   // eslint-disable-next-line react/prop-types
@@ -12,12 +13,12 @@ function renderWithProvider(ui, store, renderOptions) {
   return { ...render(ui, { wrapper: Wrapper, ...renderOptions }) };
 }
 
-let store = configureStore({ reducer: { rockets: rocketsReducer } });
+let store = configureStore({ reducer: { rockets: rocketsReducer, missions: MissionsReducer } });
 
 describe('Rockets reservation functionality', () => {
   beforeEach(() => {
     fetchMock.resetMocks();
-    store = configureStore({ reducer: { rockets: rocketsReducer } });
+    store = configureStore({ reducer: { rockets: rocketsReducer, missions: MissionsReducer } });
   });
 
   it('should allow user to book rocket reservation', async () => {
