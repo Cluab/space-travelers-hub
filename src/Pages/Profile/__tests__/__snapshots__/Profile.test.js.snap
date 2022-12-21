@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`missions component test cases should match with snapshot 1`] = `
+<div
+  className="profile"
+>
+  <div
+    className="profile-missions"
+  >
+    <h2
+      className="profileMissionH2"
+    >
+      My Missions
+    </h2>
+  </div>
+  <div
+    className="profile-rockets"
+  >
+    <h2
+      className="rockets-title"
+    >
+      My Rockets
+    </h2>
+  </div>
+</div>
+`;

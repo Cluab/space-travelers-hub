@@ -1,0 +1,71 @@
+.rocket {
+  font-family: Roboto, sans-serif;
+  display: flex;
+  gap: 1rem;
+
+  & .rocket-img {
+    width: 350px;
+  }
+
+  & > .rocket-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    & > h2 {
+      font-weight: 500;
+      font-size: 1.4em;
+    }
+
+    & > p {
+      font-weight: 400;
+      font-size: 1em;
+      line-height: 24px;
+      letter-spacing: 0.7px;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.reserved-tag {
+  background-color: #16a1b7;
+  color: rgb(241 241 241);
+  padding: 0.25rem 0.3rem;
+  outline: inherit;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 24px;
+  margin-right: 0.5rem;
+}
+
+.reserve {
+  background-color: #007bff;
+  color: rgb(241 241 241);
+  border: none;
+  padding: 0.7rem;
+  cursor: pointer;
+  outline: inherit;
+  width: 150px;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 18px;
+  font-family: Roboto, sans-serif;
+}
+
+.reserved {
+  background-color: #fff;
+  color: #808080;
+  border: 1px solid #808080;
+  padding: 0.7rem;
+  cursor: pointer;
+  outline: inherit;
+  width: 180px;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 18px;
+  font-family: Roboto, sans-serif;
+}

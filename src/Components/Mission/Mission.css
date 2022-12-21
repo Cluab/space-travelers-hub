@@ -1,0 +1,86 @@
+.mission-container {
+  border: 1px solid rgba(0, 0, 0, 0.336);
+  border-top: none;
+}
+
+.mission-info {
+  margin-top: 0;
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+}
+
+.mission-info :nth-child(1) {
+  font-weight: 500;
+  padding: 10px;
+  width: 15%;
+  border-right: 1px solid rgba(0, 0, 0, 0.336);
+}
+
+.mission-info :nth-child(2) {
+  font-size: 15px;
+  padding: 10px;
+  width: 65%;
+  border-right: 1px solid rgba(0, 0, 0, 0.336);
+}
+
+.mission-info :nth-child(3) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15%;
+  padding: 10px;
+  border-right: 1px solid rgba(0, 0, 0, 0.336);
+}
+
+.mission-info :nth-child(3) span {
+  border-right: none;
+  width: fit-content;
+  font-size: 13px;
+  padding: 5px;
+  border-radius: 8px;
+  color: white;
+}
+
+.mission-status-Active {
+  background-color: #007bff;
+}
+
+.mission-status {
+  background-color: rgb(150, 148, 148);
+}
+
+.mission-info :nth-child(4) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  width: 15%;
+}
+
+.mission-info :nth-child(4) button {
+  border-right: 2px solid;
+  height: 30px;
+  width: 100%;
+  padding: 0;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.joinMission {
+  color: rgb(88, 87, 87);
+  border: 2px solid rgb(88, 87, 87);
+}
+
+.joinMission:hover {
+  cursor: pointer;
+}
+
+.leaveMission {
+  color: red;
+  border: 2px solid red;
+}
+
+.leaveMission:hover {
+  cursor: pointer;
+}
