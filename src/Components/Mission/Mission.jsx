@@ -39,6 +39,7 @@ Mission.propTypes = {
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
-  member: PropTypes.string.isRequired,
+  member: PropTypes.bool.isRequired,
+  // member: PropTypes.string.isRequired,
 };
 export default Mission;

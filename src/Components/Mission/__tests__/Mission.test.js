@@ -15,7 +15,7 @@ const mission = [{
 }];
 const store = configureStore({ reducer: { missions: MissionsReducer } });
 
-describe('nav bar test cases', () => {
+describe('mission component test cases', () => {
   test('should match with snapshot', () => {
     const tree = renderer
       .create(
