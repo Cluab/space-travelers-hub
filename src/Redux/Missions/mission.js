@@ -20,14 +20,12 @@ const MissionsSlice = createSlice({
     },
   },
   extraReducers: (builder) => {
-    builder.addCase(getMissions.fulfilled, (_, action) => [
-      ...action.payload.map((mission) => ({
-        id: mission.mission_id,
-        name: mission.mission_name,
-        description: mission.description,
-        member: false,
-      })),
-    ]);
+    builder.addCase(getMissions.fulfilled, (_, action) => action.payload.map((mission) => ({
+      id: mission.mission_id,
+      name: mission.mission_name,
+      description: mission.description,
+      member: false,
+    })));
   },
 });
 
