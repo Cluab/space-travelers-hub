@@ -1,32 +1,17 @@
-<!-- TABLE OF CONTENTS -->
 
-# 📗 Table of Contents
 
-- [📖 About the Project](#about-project)
-  - [🛠 Built With](#built-with)
-    - [Tech Stack](#tech-stack)
-    - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
-- [💻 Getting Started](#getting-started)
-  - [Setup](#setup)
-  - [Prerequisites](#prerequisites)
-  - [Install](#install)
-  - [Usage](#usage)
-  - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment)
-- [👥 Authors](#authors)
-- [🔭 Future Features](#future-features)
-- [🤝 Contributing](#contributing)
-- [⭐️ Show your support](#support)
-- [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ](#faq)
-- [📝 License](#license)
+
 
 <!-- PROJECT DESCRIPTION -->
 
 # 📖 Space Travels' Hub <a name="about-project"></a>
 
 **Space Travels' Hub** is basic project that provides commercial and scientific space travel services, offering a range of rockets for booking and the opportunity to join selected space missions. It also allows users to view mission details and requirements, and track the progress of their bookings in the profile section.
+
+<hr>
+<br>
+
+![alt text](/app_screenshot.png "app screenshot")
 
 ## 🛠 Built With <a name="built-with"></a>
 
