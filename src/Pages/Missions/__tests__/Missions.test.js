@@ -1,5 +1,6 @@
-import { render, act } from '@testing-library/react';
-// import { BrowserRouter } from 'react-router-dom';
+import {
+  render, act, screen, fireEvent,
+} from '@testing-library/react';
 import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
 import { configureStore } from '@reduxjs/toolkit';
@@ -32,5 +33,28 @@ describe('missions component test cases', () => {
     const missionContainer = document.querySelector('.missions');
     expect(missions.length).toBe(10);
     expect(missionContainer).toBeVisible();
+  });
+
+  it('shoud check for no active members', async () => {
+    await act(() => store.dispatch(getMissions()));
+    render(
+      <Provider store={store}>
+        <MissionPage />
+      </Provider>,
+    );
+    const member = screen.queryByText('Active Member');
+    expect(member).toBe(null);
+  });
+
+  it('shoud check for active members', async () => {
+    await act(() => store.dispatch(getMissions()));
+    render(
+      <Provider store={store}>
+        <MissionPage />
+      </Provider>,
+    );
+    fireEvent.click(screen.getAllByText('Join Mission')[0]);
+    const member = screen.queryByText('Active Member');
+    expect(member.textContent).toBe('Active Member');
   });
 });
