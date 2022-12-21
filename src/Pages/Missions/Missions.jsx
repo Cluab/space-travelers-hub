@@ -2,6 +2,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import Mission from '../../Components/Mission/Mission';
 import './Missions.css';
+import './Missions.scss';
 import { getMissions } from '../../Redux/Missions/mission';
 
 const MissionPage = () => {
@@ -12,12 +13,6 @@ const MissionPage = () => {
     if (missions.length) return;
     dispatch(getMissions());
   }, [dispatch, missions.length]);
-  const isOdd = (num) => num % 2;
-  const getBackGroundColor = (num) => {
-    let color = 'white';
-    if (isOdd(num)) color = 'rgb(240, 235, 235)'; // even
-    return color;
-  };
   return (
     <div className="missions-container">
       <ul className="missions-titles">
@@ -27,9 +22,8 @@ const MissionPage = () => {
         <li />
       </ul>
       <div className="missions">
-        {missions.map((mission, index) => (
+        {missions.map((mission) => (
           <Mission
-            style={{ backgroundColor: getBackGroundColor(index) }}
             key={mission.id}
             id={mission.id}
             name={mission.name}
